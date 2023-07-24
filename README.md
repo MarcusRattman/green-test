@@ -73,7 +73,7 @@ curl -H "Content-Type: application/json" -X POST http://localhost:3000/addtask -
 На что вы получите ответ:
 
 ```
-{"done":"[X] Test"}
+{"done":"[X] test"}
 ```
 
 Ну или если с запросом что-то не так:
