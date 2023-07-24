@@ -52,7 +52,7 @@
 ## Установка
 1. Клонировать данный репозиторий в любую свободную папку
    - `git clone https://github.com/MarcusRattman/green-test.git`
-2. Запустить из корня скрипт ```install.bat```
+2. Запустить из корня скрипт `install.bat`
 3. После установки `docker-compose` запустит 3 контейнера:
    - rabbitmq
    - green-test-m1
