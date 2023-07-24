@@ -44,6 +44,9 @@
 Список активных очередей RabbitMQ:
 ![RabbitMQ](/assets/Rabbit.png)
 
+## Видео демо
+[![Video](https://img.youtube.com/vi/ONBhf_yziPw/maxresdefault.jpg)](https://www.youtube.com/watch?v=ONBhf_yziPw)
+
 ## Запуск
 Запускается из корня docker-compose up.
 После запуска нужно подождать секунд 20, пока загрузится RabbitMQ, от которого зависят остальные два контейнера.
