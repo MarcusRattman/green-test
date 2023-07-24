@@ -1,5 +1,5 @@
 # Тестовое задание Green Api
-![Einstein](/assets/einstein.jpg)
+![Einstein](/assets/einstein.png)
 
 ## Структура проекта
 ### M1
