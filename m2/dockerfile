@@ -3,4 +3,4 @@ WORKDIR /m2
 COPY . .
 RUN npm install
 EXPOSE 3001
-CMD ["npm",  "run", "launch"]
+CMD ["npm",  "run", "start"]
