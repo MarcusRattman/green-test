@@ -1,0 +1,38 @@
+version: '1.0'
+services:
+  rabbitmq:
+    image: rabbitmq
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+    networks:
+      - rabbit
+  m1:
+    build: /m1
+    volumes:
+      - ./m1:/m1
+    depends_on:
+      - rabbitmq
+    ports:
+      - 3000:3000
+    environment:
+      - HOST=amqp://rabbitmq
+    networks:
+      - rabbit
+    restart: on-failure
+  m2:
+    build: /m2
+    volumes:
+      - ./m2:/m2
+    depends_on:
+      - rabbitmq
+    ports:
+      - 3001:3001
+    environment:
+      - HOST=amqp://rabbitmq
+    networks:
+      - rabbit
+    restart: on-failure
+networks:
+  rabbit:
+    driver: bridge
