@@ -3,4 +3,5 @@ WORKDIR /m2
 COPY . .
 RUN npm install
 EXPOSE 3001
+RUN npm install -g typescript
 CMD ["npm",  "run", "start"]
