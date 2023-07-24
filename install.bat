@@ -1,8 +1,12 @@
+@echo off
 cd ./m1
-npm i
+echo "Installing frontend dependencies..."
+call npm i
 cd ../m2
-npm i
+echo "Installing backend dependencies..."
+call npm i
 cd ..
+echo "Setting up docker environment..."
 docker-compose up -d
-echo "Installation complete"
+echo "Installation Finished"
 pause

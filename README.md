@@ -48,19 +48,19 @@
 ### Видео демо
 [![Video](/assets/preview.png)](https://www.youtube.com/watch?v=g6yp5wDjjE8)
 
-## Установка и запуск
-Скопировать и вставить код ниже в командную строку в любой свободной папке
-```
-git clone https://github.com/MarcusRattman/green-test.git &
-cd green-test/m1 &
-npm i &
-cd ../m2 &
-npm i &
-cd .. &
-docker-compose up -d &
-echo "Installation Finished" & pause
-```
-Запускается из корня docker-compose up.
+# Установка и запуск
+## Установка
+1. Клонировать данный репозиторий в любую свободную папку
+   - `git clone https://github.com/MarcusRattman/green-test.git`
+2. Запустить из корня скрипт ```install.bat```
+3. После установки `docker-compose` запустит 3 контейнера:
+   - rabbitmq
+   - green-test-m1
+   - green-test-m2
+
+## Запуск
+Запускается из корня `docker-compose up`
+
 После запуска нужно подождать секунд 20, пока загрузится RabbitMQ, от которого зависят остальные два контейнера.
 
 ## POST -> http://localhost:3000/addtask
