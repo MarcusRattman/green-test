@@ -3,4 +3,4 @@ WORKDIR /m1
 COPY . .
 RUN npm install
 EXPOSE 3000
-CMD ["npm",  "run", "start"]
+CMD ["npm",  "run", "launch"]
