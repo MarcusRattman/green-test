@@ -18,7 +18,7 @@ async function rabbit() {
     await channel.assertQueue('done', { durable: false });
 
     await channel.consume('tasks', (msg: ConsumeMessage | null) => {
-        console.log(`Got new task ${ msg?.content.toString() }`);
+        console.log(`Got new task: ${ msg?.content.toString() }`);
         let done = `[X] ${ msg?.content.toString() }`;
         channel.ack(msg!);
         channel.sendToQueue('done', Buffer.from(done));
