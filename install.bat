@@ -1,4 +1,4 @@
-cd m1
+cd ./m1
 npm i
 cd ../m2
 npm i
