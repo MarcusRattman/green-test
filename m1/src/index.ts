@@ -28,7 +28,7 @@ async function rabbit() {
 }
 
 app.get('*', (req: Request, res: Response) => {
-    res.status(403).send('Forbidden')
+    res.status(403).send('403 Forbidden')
 })
 
 app.post('/addtask', async (req: Request, res: Response) => {
