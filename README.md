@@ -45,7 +45,7 @@
 ![RabbitMQ](/assets/Rabbit.png)
 
 ### Видео демо
-[![Video](https://img.youtube.com/vi/ONBhf_yziPw/maxresdefault.jpg)](https://www.youtube.com/watch?v=ONBhf_yziPw)
+[![Video](/assets/preview.png)](https://www.youtube.com/watch?v=ONBhf_yziPw)
 
 ## Запуск
 Запускается из корня docker-compose up.
