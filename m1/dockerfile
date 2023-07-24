@@ -4,4 +4,7 @@ COPY . .
 RUN npm install
 EXPOSE 3000
 RUN npm install -g typescript
+RUN npm install @types/amqplib
+RUN npm install @types/express
+RUN npm install @types/node
 CMD ["npm",  "run", "start"]
