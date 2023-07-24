@@ -48,7 +48,18 @@
 ### Видео демо
 [![Video](/assets/preview.png)](https://www.youtube.com/watch?v=g6yp5wDjjE8)
 
-## Запуск
+## Установка и запуск
+Скопировать и вставить код ниже в командную строку в любой свободной папке
+```
+git clone https://github.com/MarcusRattman/green-test.git &
+cd green-test/m1 &
+npm i &
+cd ../m2 &
+npm i &
+cd .. &
+docker-compose up -d &
+echo "Installation Finished" & pause
+```
 Запускается из корня docker-compose up.
 После запуска нужно подождать секунд 20, пока загрузится RabbitMQ, от которого зависят остальные два контейнера.
 
