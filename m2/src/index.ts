@@ -1,5 +1,6 @@
 import express from "express";
-import { connect, Channel, Connection } from 'amqplib';
+import { Request, Response } from "express";
+import { connect, Channel, Connection, ConsumeMessage } from 'amqplib';
 
 const app = express();
 const port = 3001;
@@ -16,7 +17,7 @@ async function rabbit() {
     await channel.assertQueue('tasks', { durable: false });
     await channel.assertQueue('done', { durable: false });
 
-    await channel.consume('tasks', (msg) => {
+    await channel.consume('tasks', (msg: ConsumeMessage | null) => {
         console.log(`Got new task ${ msg?.content.toString() }`);
         let done = `[X] ${ msg?.content.toString() }`;
         channel.ack(msg!);
@@ -26,7 +27,7 @@ async function rabbit() {
     })
 }
 
-app.get('*', (req, res) => {
+app.get('*', (req: Request, res: Response) => {
     res.status(403).send('403 Forbidden');
 })
 

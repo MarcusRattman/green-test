@@ -1,5 +1,6 @@
 import express from "express";
-import { connect, Channel, Connection } from 'amqplib';
+import { Request, Response } from "express";
+import { connect, Channel, Connection, ConsumeMessage } from 'amqplib';
 
 const app = express();
 app.use(express.json());
@@ -18,7 +19,7 @@ async function rabbit() {
     await channel.assertQueue('tasks', { durable: false });
     await channel.assertQueue('done', { durable: false });
 
-    channel.consume('done', (msg) => {
+    channel.consume('done', (msg: ConsumeMessage | null) => {
         console.log(`Received processed task: ${ msg?.content }`);
         channel.ack(msg!);
         done = JSON.stringify({'done': `${ msg?.content }`});
@@ -26,11 +27,11 @@ async function rabbit() {
     });
 }
 
-app.get('*', (req, res) => {
+app.get('*', (req: Request, res: Response) => {
     res.status(403).send('Forbidden')
 })
 
-app.post('/addtask', async (req, res) => {
+app.post('/addtask', async (req: Request, res: Response) => {
     const data = req.body;
 
     console.log(`Received POST request with data: ${JSON.stringify(data)}`);
