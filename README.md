@@ -1,6 +1,7 @@
 # Тестовое задание Green Api
-## Структура проекта
+![Einstein](/assets/einstein.jpg)
 
+## Структура проекта
 ### M1
 Своеобразный "фронт", имеющий эндпоинт /addtask, который принимает POST реквест в виде:
 ```
@@ -45,7 +46,7 @@
 ![RabbitMQ](/assets/Rabbit.png)
 
 ### Видео демо
-[![Video](/assets/preview.png)](https://www.youtube.com/watch?v=ONBhf_yziPw)
+[![Video](/assets/preview.png)](https://www.youtube.com/watch?v=g6yp5wDjjE8)
 
 ## Запуск
 Запускается из корня docker-compose up.
